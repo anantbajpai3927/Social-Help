@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for slider colors */
+:root {
+  --slider-blue-color: #3b82f6;
+  --slider-red-color: #ef4444;
+  --slider-green-color: #10b981;
+  --slider-yellow-color: #f59e0b;
+  --slider-purple-color: #8b5cf6;
+}
+
+/* Custom slider styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e5e7eb;
+  cursor: pointer;
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-track {
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.slider-blue::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-blue::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.slider-red::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ef4444;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-red::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.slider-green::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-green::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.slider-yellow::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #f59e0b;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-yellow::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.slider-purple::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-purple::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Firefox slider styles */
+.slider-blue::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-red::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ef4444;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-green::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #10b981;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-yellow::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #f59e0b;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+.slider-purple::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
+}
+
+/* Animation for fade in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+  .slider-thumb {
+    width: 24px;
+    height: 24px;
+  }
+  
+  input[type="range"] {
+    height: 10px;
+  }
+  
+  input[type="range"]::-webkit-slider-track {
+    height: 10px;
+  }
+  
+  input[type="range"]::-moz-range-track {
+    height: 10px;
+  }
+}
